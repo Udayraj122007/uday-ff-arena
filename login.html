@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UDAY FF ARENA - Login</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:url('ff.jpg');
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+color:white;
+}
+
+.overlay{
+background:rgba(0,0,0,0.8);
+min-height:100vh;
+padding:20px;
+}
+
+nav{
+background:#111;
+padding:15px;
+text-align:center;
+margin-bottom:20px;
+border-radius:10px;
+}
+
+nav a{
+color:#ffcc00;
+text-decoration:none;
+margin:15px;
+font-weight:bold;
+font-size:18px;
+}
+
+nav a:hover{
+color:#ff6a00;
+}
+
+h1{
+text-align:center;
+color:#ffcc00;
+margin-bottom:20px;
+text-shadow:0 0 10px orange;
+}
+
+.profile{
+max-width:500px;
+margin:20px auto;
+background:rgba(20,20,20,0.9);
+padding:20px;
+border-radius:15px;
+text-align:center;
+}
+
+.profile h3{
+color:#ffcc00;
+margin-bottom:10px;
+}
+
+.profile p{
+margin:5px;
+}
+
+.container{
+max-width:500px;
+margin:20px auto;
+background:rgba(20,20,20,0.9);
+padding:25px;
+border-radius:15px;
+box-shadow:0 0 15px rgba(255,106,0,0.5);
+}
+
+.container h2{
+text-align:center;
+color:#ff6a00;
+margin-bottom:15px;
+}
+
+input,select{
+width:100%;
+padding:12px;
+margin:8px 0;
+border:none;
+border-radius:8px;
+}
+
+button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:8px;
+background:#ff6a00;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff8c1a;
+}
+
+.success{
+display:none;
+margin-top:10px;
+padding:10px;
+background:green;
+border-radius:8px;
+text-align:center;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+<nav>
+<a href="index.html">🏠 Home</a>
+<a href="login.html">🎮 Tournament</a>
+<a href="leaderboard.html">🏆 Leaderboard</a>
+<a href="contact.html">📞 Contact</a>
+<a href="schedule.html">📅 Schedule</a>
+<a href="prizepool.html">💎 Prize Pool</a>
+</nav>
+<h1>🔥 UDAY FF ARENA 🔥</h1>
+
+<div class="profile">
+<h3>👤 Player Profile</h3>
+<p>Level: 65</p>
+<p>Rank: Heroic</p>
+<p>Status: Online</p>
+</div>
+
+<div class="container">
+
+<h2>🔐 Player Login</h2>
+
+<input type="text" id="username" placeholder="Username">
+
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<div class="success" id="loginMsg">
+✅ Login Successful
+</div>
+
+</div>
+
+<div class="container">
+
+<h2>🏆 Tournament Registration</h2>
+
+<input type="text" id="playername" placeholder="Player Name">
+
+<input type="text" id="uid" placeholder="Free Fire UID">
+
+<input type="text" id="team" placeholder="Team Name">
+
+<select>
+<option>Solo</option>
+<option>Duo</option>
+<option>Squad</option>
+</select>
+
+<button onclick="registerTournament()">
+Register Tournament
+</button>
+
+<div class="success" id="regMsg">
+🏆 Registration Successful
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function login(){
+
+let user=document.getElementById("username").value;
+let pass=document.getElementById("password").value;
+
+if(user!=="" && pass!==""){
+document.getElementById("loginMsg").style.display="block";
+}
+else{
+alert("Please enter Username and Password");
+}
+
+}
+
+function registerTournament(){
+
+let name=document.getElementById("playername").value;
+let uid=document.getElementById("uid").value;
+let team=document.getElementById("team").value;
+
+if(name!=="" && uid!=="" && team!==""){
+document.getElementById("regMsg").style.display="block";
+}
+else{
+alert("Please fill all fields");
+}
+
+}
+
+</script>
+
+</body>
+</html>
