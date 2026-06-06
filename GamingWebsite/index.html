@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UDAY FF ARENA</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+
+background:url('ff.jpg');
+background-size:cover;
+background-position:center;
+
+color:white;
+}
+
+/* Dark overlay */
+.overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+}
+
+/* Floating animation */
+@keyframes float{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-10px);}
+100%{transform:translateY(0px);}
+}
+
+.content{
+position:relative;
+z-index:2;
+height:100vh;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+h1{
+font-size:70px;
+color:#ffcc00;
+
+animation:float 3s infinite;
+text-shadow:0 0 20px orange;
+}
+
+p{
+font-size:24px;
+margin-top:10px;
+margin-bottom:25px;
+}
+
+/* Glowing button */
+.btn{
+padding:15px 40px;
+font-size:20px;
+
+border:none;
+border-radius:10px;
+
+background:#ff6a00;
+color:white;
+
+cursor:pointer;
+
+box-shadow:0 0 20px #ff6a00;
+
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+
+box-shadow:
+0 0 10px #ff6a00,
+0 0 25px #ff6a00,
+0 0 40px #ff6a00;
+}
+
+/* Esports cards */
+
+.cards{
+position:absolute;
+bottom:40px;
+
+display:flex;
+gap:20px;
+}
+
+.card{
+background:rgba(20,20,20,0.85);
+
+padding:20px;
+
+width:220px;
+
+border-radius:12px;
+
+backdrop-filter:blur(5px);
+
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+color:#ffcc00;
+margin-bottom:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="content">
+
+<h1>🔥 UDAY FF ARENA 🔥</h1>
+
+<p>India's Ultimate Free Fire Tournament Platform</p>
+
+<button class="btn"
+onclick="window.location.href='login.html'">
+🎮 ENTER ARENA
+</button>
+
+<div class="cards">
+
+<div class="card">
+<h3>🏆 Tournaments</h3>
+<p>Daily Custom Room Battles</p>
+</div>
+
+<div class="card">
+<h3>⚔ Esports Teams</h3>
+<p>Create & Manage Teams</p>
+</div>
+
+<div class="card">
+<h3>💎 Rewards</h3>
+<p>Win Exciting Prizes</p>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
